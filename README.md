@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Google Software Product Sprint
 
 This repo contains the projects you'll work on throughout SPS.
@@ -10,3 +11,7 @@ To get started:
   - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
 
 Then follow the on-screen instructions to set up your repo.
+=======
+# software-product-sprint
+Google SPS Portfolio
+>>>>>>> 7f646cf0628bb3fd8f2ae4632a4af6e875ff360a
