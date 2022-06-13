@@ -34,3 +34,15 @@ async function showMeSomething(){
     const bingBong = document.getElementById('test-container');
     bingBong.innerText = textFromResponse;
 }
+
+async function generate(){
+    const responseFromServer = await fetch("/hello");
+    const arr = await responseFromServer.json();
+
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    const randElement = document.getElementById("rand-element");
+    console.log(arr);
+    randElement.innerText = arr[randomIndex];
+
+}
