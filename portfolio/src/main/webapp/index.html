@@ -38,7 +38,32 @@
       </button>
       <p id = "rand-element"></p>
     
+      <form action="/form-handler" method="POST">
+        <p>Enter email for contact here:</p>
+        <textarea name="text-input">hello </textarea>
+        <br/><br/>
 
+        <p> Choose reason for contact:</p>
+        <label>
+            <input type = "checkbox" name = "internship" value = "true">
+            Internship
+        </label>
+
+        <br/>
+        <label>
+            <input type = "checkbox" name = "job" value = "true">
+            Job
+        </label>
+        <br/>
+
+        <label>
+            <input type = "checkbox" name = "other" value = "true">
+            Other
+        </label>
+        <br/>
+
+        <input type="submit" />
+    </form>
 
     </div>
   </body>
