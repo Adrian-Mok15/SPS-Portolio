@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['Bingbong', 'QK65', 'Monitor', 'Croissant!', 'Baguette!'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -25,4 +25,24 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+}
+
+async function showMeSomething(){
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+    const bingBong = document.getElementById('test-container');
+    bingBong.innerText = textFromResponse;
+}
+
+async function generate(){
+    const responseFromServer = await fetch("/hello");
+    const arr = await responseFromServer.json();
+
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    const randElement = document.getElementById("rand-element");
+    console.log(arr);
+    randElement.innerText = arr[randomIndex];
+
 }
