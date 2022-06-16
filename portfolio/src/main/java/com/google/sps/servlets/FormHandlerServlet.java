@@ -14,8 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.util.regex.Pattern;
-// import org.jsoup.Jsoup;
+import org.jsoup.Jsoup;
 // import org.jsoup.safety.Whitelist;
+import org.jsoup.safety.Safelist;
+
 
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
@@ -24,8 +26,8 @@ public class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
-    String textValue = request.getParameter("text-input");
-    // String title = jsoup.clean(request.getParameter("title"), Whitelist.none());
+    // String textValue = request.getParameter("text-input");
+    String textValue = Jsoup.clean(request.getParameter("text-input"), Safelist.basic());
     long timestamp = System.currentTimeMillis();
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
