@@ -54,6 +54,13 @@
       <version>1.14.2</version>
     </dependency>
 
+    <!-- MTA API-->
+    <dependency>
+        <groupId>org.mobilitydata</groupId>
+        <artifactId>gtfs-realtime-bindings</artifactId>
+        <version>0.0.8</version>
+    </dependency>
+
 
   </dependencies>
 
