@@ -21,6 +21,7 @@ package dev.katsute.onemta;
 import dev.katsute.onemta.exception.DataResourceException;
 
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
@@ -54,7 +55,14 @@ public abstract class DataResource {
      * @see DataResourceType
      * @since 1.0.0
      */
+
     public static DataResource create(final DataResourceType type, final File file){
+      
+        // URL resource = getClass().getClassLoader().getResource("");
+        // File file = new File(filePath);
+
+        
+
         Objects.requireNonNull(type, "DataResourceType must not be null");
         Objects.requireNonNull(file, "File must not be null");
         if(!file.exists())
